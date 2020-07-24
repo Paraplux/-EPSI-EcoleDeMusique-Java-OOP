@@ -3,7 +3,6 @@ package com.marcbouchez.drivers;
 import com.marcbouchez.models.Instrument;
 import com.marcbouchez.utils.Menu;
 
-import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;

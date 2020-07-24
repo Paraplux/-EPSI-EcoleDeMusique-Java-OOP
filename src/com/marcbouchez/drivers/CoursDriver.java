@@ -1,6 +1,10 @@
 package com.marcbouchez.drivers;
 
-import com.marcbouchez.models.*;
+import com.marcbouchez.models.CoursIndividuel;
+import com.marcbouchez.models.CoursCollectif;
+import com.marcbouchez.models.Cours;
+import com.marcbouchez.models.Planning;
+import com.marcbouchez.models.DemiJour;
 import com.marcbouchez.utils.Menu;
 
 import java.util.*;
@@ -114,7 +118,6 @@ public class CoursDriver {
      * Affiche un récapitulatif des cours déjà assignés et de leur demi journée respectives
      */
     public static void recap() {
-        boolean foundOcurrence;
         for (Planning p : PlanningDriver.getPlannings()) {
             HashMap<DemiJour, Cours> lesCoursAssignes = p.getLesCoursAssignes();
             Set<Map.Entry<DemiJour, Cours>> set = lesCoursAssignes.entrySet();

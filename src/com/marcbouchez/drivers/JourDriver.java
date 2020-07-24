@@ -1,7 +1,6 @@
 package com.marcbouchez.drivers;
 
 import com.marcbouchez.models.Jour;
-import com.marcbouchez.utils.UniqueID;
 
 import java.util.LinkedList;
 import java.util.List;
