@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class InstrumentDriver {
 
-    private static List<Instrument> instruments = new LinkedList<>();
+    private static final List<Instrument> instruments = new LinkedList<>();
     private static final Scanner scanner = new Scanner(System.in);
 
     static {

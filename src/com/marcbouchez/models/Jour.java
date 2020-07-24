@@ -6,7 +6,6 @@ public class Jour implements Countable {
 
     private int id;
     private String libelle;
-    private int nbWeek;
 
     public int getId() {
         return id;

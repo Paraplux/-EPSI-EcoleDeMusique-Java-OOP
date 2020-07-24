@@ -18,9 +18,9 @@ public class PlanningDriver {
     private static final LocalDate date = LocalDateTime.now().toLocalDate();
 
     //le numéro de semaine d'aujourd'hui
-    static final int CURRENT_WEEK = date.get(WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear());
+    private static final int CURRENT_WEEK = date.get(WeekFields.of(Locale.getDefault()).weekOfWeekBasedYear());
     //le nombre maximum de semaine dépendant de l'année en cours
-    static final long MAX_WEEK_IN_YEAR = IsoFields.WEEK_OF_WEEK_BASED_YEAR.rangeRefinedBy(date).getMaximum();
+    private static final long MAX_WEEK_IN_YEAR = IsoFields.WEEK_OF_WEEK_BASED_YEAR.rangeRefinedBy(date).getMaximum();
 
     /**
      * Permet de gérer la redirection du sous menu planning
@@ -89,6 +89,8 @@ public class PlanningDriver {
                     break;
                 case 3 :
                     PlanningDriver.assign(weekToDisplay);
+                    break;
+                default :
                     break;
             }
         } else {

@@ -6,8 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class JourDriver {
-    private static List<Jour> joursSemaine = new LinkedList<>();
-    private static String[] libelles = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
+    private static final List<Jour> joursSemaine = new LinkedList<>();
+    private static final String[] libelles = {"Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"};
 
     // Bloc d'instanciation statique pour générer les jours
     static {

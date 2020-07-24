@@ -21,7 +21,7 @@ import java.util.Scanner;
 public class Menu {
 
     List<MenuEntry> menuEntries;
-    static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public Menu() {
         this.menuEntries = new LinkedList<>();
@@ -82,7 +82,7 @@ public class Menu {
 
     /**
      * Get the userEntry, if it finds entry, launch the callback, if not, re-render()
-     * @param userEntry
+     * @param userEntry integer that represents the choosen entry
      */
     public void process (int userEntry) {
         boolean foundAChoice = false;
@@ -90,7 +90,9 @@ public class Menu {
             for (MenuEntry entry : menuEntries) {
                 if (userEntry == entry.choice) {
                     foundAChoice = true;
-                    entry.callback.run();
+                    if (entry.callback != null) {
+                        entry.callback.run();
+                    }
                 }
             }
             render();
@@ -113,10 +115,10 @@ public class Menu {
     /**
      * Inner Class to represent a menu entry
      */
-    class MenuEntry {
-        private int choice;
-        private String entry;
-        private Runnable callback;
+    static class MenuEntry {
+        private final int choice;
+        private final String entry;
+        private final Runnable callback;
 
         public MenuEntry (int choice, String entry, Runnable callback) {
             this.choice = choice;
