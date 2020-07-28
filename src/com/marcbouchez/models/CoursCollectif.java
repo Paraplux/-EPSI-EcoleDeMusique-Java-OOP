@@ -1,8 +1,7 @@
 package com.marcbouchez.models;
 
-import com.marcbouchez.utils.Countable;
 
-public class CoursCollectif extends Cours implements Countable {
+public class CoursCollectif extends Cours {
 
     private String libelle;
     private int ageMaxi;

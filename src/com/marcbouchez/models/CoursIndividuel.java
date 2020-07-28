@@ -1,10 +1,9 @@
 package com.marcbouchez.models;
 
 import com.marcbouchez.drivers.InstrumentDriver;
-import com.marcbouchez.utils.Countable;
 import com.marcbouchez.utils.Search;
 
-public class CoursIndividuel extends Cours implements Countable {
+public class CoursIndividuel extends Cours {
     private Instrument instrument;
 
     public void setInstrument(int instrumentID) {
