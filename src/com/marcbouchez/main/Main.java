@@ -47,7 +47,7 @@ public class Main {
 
     public static void app () {
 
-        System.out.println("Bienvenue dans votre gestionnaire de cours de musique");
+        System.out.println("Bienvenue dans votre gestionnaire de cours de musique, test");
         System.out.println("Vous allez pouvoir gérer une année entière de cours");
 
 
